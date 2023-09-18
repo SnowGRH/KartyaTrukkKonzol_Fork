@@ -2,24 +2,17 @@ package kartyatrukkkonzolon;
 
 public class Pakli {
 
-    private String leira = "";
+    private String leira;
 
     public Pakli() {
-        this.leira = leira;
-        feltolt();
-        for (int i = 0; i < 3; i++) {
-            kirak();
-            int oszlop = Melyik();
-            kever(0);
-        }
+        this.feltolt(String[] szinek , String[] ertekek);
 
         ezVolt();
 
     }
 
     private void feltolt() {
-        String[] szinek = {"P", "T", "Z", "M"};
-        String[] ertekek = {"Ász", "Kir", "Fel", "X", "IX", "VIII"};
+
         int i = 1;
         for (String szin : szinek) {
             for (int e = 0; e < ertekek.length && i < pakli.length; e++) {

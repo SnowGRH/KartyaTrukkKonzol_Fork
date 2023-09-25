@@ -9,16 +9,6 @@ public class Pakli {
 
     }
 
-
-
-
-    public void Pakli() {
-        this.feltolt();
-
-
-
-    }
-
     private void feltolt() {
     String[] szinek = {"P", "T", "Z", "M"};
     String[] ertekek = {"Ász", "Kir", "Fel", "X", "IX", "VIII"};
@@ -69,7 +59,9 @@ public class Pakli {
         pakli = ujPakli;
     }
 
+
    public void ezVolt() {
         System.out.println("A választott lap: " + this.pakli[11].getLeiras());
-    }
+
+}
 }

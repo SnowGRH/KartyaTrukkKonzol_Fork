@@ -69,7 +69,7 @@ public class Pakli {
         pakli = ujPakli;
     }
 
-    private void ezVolt() {
-        System.out.println("A választott lap: " + this.pakli[11]);
+   public void ezVolt() {
+        System.out.println("A választott lap: " + this.pakli[11].getLeiras());
     }
 }

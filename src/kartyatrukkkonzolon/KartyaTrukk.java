@@ -22,6 +22,7 @@ public class KartyaTrukk {
             int oszlop = melyik();
             this.pakli.kever(oszlop);
         }
+        this.pakli.ezVolt();
     }
 
     private int melyik() {

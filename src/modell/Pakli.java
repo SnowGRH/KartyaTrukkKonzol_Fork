@@ -68,4 +68,5 @@ public class Pakli {
         return ujPakli[11];
     }
 
+
 }

@@ -1,17 +1,18 @@
-package kartyatrukkkonzolon;
+package modell;
 
 public class Pakli {
-    
 
     private Lap[] pakli = new Lap[22];
+    private Lap[] ujPakli = new Lap[22];
+
     public Pakli() {
         this.feltolt();
 
     }
 
     private void feltolt() {
-    String[] szinek = {"P", "T", "Z", "M"};
-    String[] ertekek = {"Ász", "Kir", "Fel", "X", "IX", "VIII"};
+        String[] szinek = {"P", "T", "Z", "M"};
+        String[] ertekek = {"Ász", "Kir", "Fel", "X", "IX", "VIII"};
         int i = 1;
         for (String szin : szinek) {
             for (int e = 0; e < ertekek.length && i < this.pakli.length; e++) {
@@ -21,19 +22,18 @@ public class Pakli {
 
     }
 
-    public void kirak() {
-        for (int i = 1; i < pakli.length; i++) {
-            System.out.printf("%-8s", this.pakli[i].getLeiras());
-            if (i % 3 == 0) {
-                System.out.println("");
-            }
-        }
+    public Lap[] getPakli() {
+        return pakli;
     }
 
-    public void kever(int oszlop) {
+    public void setOszlo(int oszlop) {
+        kever(oszlop);
+    }
+
+    private void kever(int oszlop) {
         // mindig középre a választott
-        Lap[] ujPakli = new Lap[22];
-        switch(oszlop) {
+
+        switch (oszlop) {
             case 1:
                 for (int i = 1; i <= 7; i++) {
                     ujPakli[i] = this.pakli[20 - (i - 1) * 3];
@@ -56,12 +56,16 @@ public class Pakli {
                 }
                 break;
         }
-        pakli = ujPakli;
+        
     }
 
+    public Lap[] getUjPakli() {
+        return ujPakli;
+    }
 
-   public void ezVolt() {
-        System.out.println("A választott lap: " + this.pakli[11].getLeiras());
+    public Lap ezVolt() {
+        //System.out.println("A választott lap: " + this.pakli[11].getLeiras());
+        return ujPakli[11];
+    }
 
-}
 }
